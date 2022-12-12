@@ -11,19 +11,19 @@ pipeline{
         sh 'df -h'
       }
     }
-    stage('3-real time Linux processes'){
+    stage('3-print'){
       steps{
-        sh 'top'
+        sh 'echo "hello"'
       }
     }
-    stage('4-disk analysis'){
+    stage('4-disk bloc'){
       steps{
         sh 'lsblk'
       }
     }
-    stage('5-cpu analysis'){
+    stage('5-greatings'){
       steps{
-        sh 'lscpu'
+        sh 'echo "welcome to appbank"'
       }
     }
   }
