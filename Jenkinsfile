@@ -16,11 +16,15 @@ pipeline{
         sh 'top'
       }
     }
-    stage('cpu analysis'){
+    stage('4-disk analysis'){
+      steps{
+        sh 'lsblk'
+      }
+    }
+    stage('5-cpu analysis'){
       steps{
         sh 'lscpu'
       }
     }
-    
   }
 }
