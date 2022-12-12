@@ -1,14 +1,14 @@
 pipeline{
   agent any
   stages{
-    stage('1-system update'){
+    stage('1-memory space'){
       steps{
-        sh 'system apt update -y'
+        sh 'free -g'
       }
     }
     stage('2-disk free space'){
       steps{
-        sh 'df -ef'
+        sh 'df -h'
       }
     }
     stage('3-real time Linux processes'){
